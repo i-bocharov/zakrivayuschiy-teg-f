@@ -13,4 +13,18 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+}
+
+@supports (font-variation-settings: normal) {
+  .page {
+      font-family: var(--font-main, Inter-Variable), sans-serif;
+      font-variation-settings: 'wght' var(--font-weight-card-text, 400);
+  }
+}
+
+.floppy {
+  inline-size: 29px;
+  block-size: 28px;
 }
