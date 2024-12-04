@@ -1,8 +1,11 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-  --font-main: Inter-Variable;
-  --font-accent: PressStart2P;
+  --page-section-size: clamp(23.4375rem, 16.2853rem + 30.5164vw, 43.75rem);
+  --font-family-main: Inter-Variable;
+  --font-family-accent: PressStart2P;
+  --font-size-header-title: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --font-size-header-text: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   --font-weight-card-title: 700;
   --font-weight-card-text: 400;
 }
