@@ -13,7 +13,6 @@
 .page {
   font-family: Inter, sans-serif;
   font-weight: 400;
-  background-color: #bdbbbb;
   min-inline-size: 320px;
   min-block-size: 100dvb;
 }
@@ -21,7 +20,7 @@
 @supports (font-variation-settings: normal) {
   .page {
       font-family: var(--font-family-main, Inter-Variable), sans-serif;
-      font-variation-settings: 'wght' var(--font-weight-card-text, 400);
+      font-variation-settings: 'wght' var(--font-weight-main, 400);
   }
 }
 
@@ -37,7 +36,7 @@
   gap: 20px;
   margin-block: 100px;
   background-color: #fff;
-  padding-block: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
+  padding-block: var(--padding-block-header, 120px);
   border: 2px solid #000;
 }
 
@@ -53,6 +52,76 @@
   font-size: var(--font-size-header-text, 23px);
   font-weight: 400;
   text-transform: uppercase;
+}
+
+.main {
+  gap: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main__article {
+
+}
+
+.main__article-title {
+  padding-inline: 10px;
+  padding-block: 5px;
+  border: 2px solid #000;
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  font-size: var(--font-size-main, 18px);
+}
+
+@supports (font-variation-settings: normal) {
+  .main__article-title {
+      font-family: var(--font-family-main, Inter-Variable), sans-serif;
+      font-variation-settings: 'wght' var(--font-weight-card-title, 700);
+  }
+}
+
+.main__article-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.main__article-content {
+  padding-inline: 25px;
+  padding-block: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border: 2px solid #000;
+}
+
+.main__article-text {
+  line-height: var(--line-height-main, 21px);
+}
+
+.card__buttons {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 12px;
+}
+
+.card__icon-button {
+
+}
+
+.like-icon {
+
+}
+
+.card__like-button {
+
+}
+
+.button__text {
+
 }
 
 .floppy {

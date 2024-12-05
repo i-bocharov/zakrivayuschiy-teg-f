@@ -1,11 +1,29 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-  --page-section-size: clamp(23.4375rem, 16.2853rem + 30.5164vw, 43.75rem);
   --font-family-main: Inter-Variable;
   --font-family-accent: PressStart2P;
+  --font-weight-card-title: 700;
+  --font-weight-main: 400;
+  --page-section-size: clamp(23.4375rem, 16.2853rem + 30.5164vw, 43.75rem);
+  --padding-block-header: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
   --font-size-header-title: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   --font-size-header-text: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-  --font-weight-card-title: 700;
-  --font-weight-card-text: 400;
+  --font-size-main: 18px;
+  --line-height-main: 21px;
+}
+
+@media (width <= 375px) {
+  :root {
+    --page-section-size: 100%;
+    --font-size-header-title: 49px;
+    --font-size-header-text: 14px;
+  }
+}
+
+@media (width >= 1440px) {
+  :root {
+    --font-size-header-title: 65px;
+    --font-size-header-text: 23px;
+  }
 }
