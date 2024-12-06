@@ -1,83 +1,62 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Закрывающий тег</title>
-    <link rel="icon" href="./images/favicon.ico" sizes="any" />
-    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="./images/mobile-icon.png" />
-    <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
-    <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/animations.css" />
+    <link rel="icon" href="./images/favicon.ico" sizes="any">
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./images/mobile-icon.png">
+    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" href="./styles/variables.css">
+    <link rel="stylesheet" href="./styles/globals.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/animations.css">
   </head>
   <body class="page">
     <header class="header page__section">
       <h1 class="header__title">&lt;/HTML&gt;</h1>
       <p class="header__text">закрывающий тег</p>
     </header>
-    <main class="main page__section">
-      <article class="main__article">
-        <h2 class="main__article-title">Фритрек и нулевой спринт: Подготовка к работе</h2>
-        <picture>
-          <source type="image/avif" srcset="./images/car.avif">
-          <source type="image/webp" srcset="./images/car.webp">
-          <img
-            src="./images/car.png"
-            alt="На изображении автомобиль."
-            class="main__article-image"
-            loading="lazy"
-          >
-          <label for=""></label>
-        </picture>
-        <div class="main__article-content">
-          <p class="main__article-text">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
-          <p class="main__article-text">Место для ваших воспоминаний о начале обучения.</p>
-          <div class="card__buttons">
-            <button class="card__icon-button">
-              <svg class="like-icon"></svg>
-            </button>
-            <button class="card__like-button">
-              <span class="button__text">Like</span>
-            </button>
-          </div>
-        </div>
-      </article>
-
-      <article class="main__article">
-        <h2 class="main__article-title">Фритрек и нулевой спринт: Подготовка к работе</h2>
-        <picture>
-          <source type="image/avif" srcset="./images/car.avif">
-          <source type="image/webp" srcset="./images/car.webp">
-          <img
-            src="./images/car.png"
-            alt="На изображении автомобиль."
-            class="main__article-image"
-            loading="lazy"
-          >
-          <label for=""></label>
-        </picture>
-        <div class="main__article-content">
-          <p class="main__article-text">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
-          <p class="main__article-text">Место для ваших воспоминаний о начале обучения.</p>
-          <div class="card__buttons">
-            <button class="card__icon-button">
-              <svg class="like-icon"></svg>
-            </button>
-            <button class="card__like-button">
-              <span class="button__text">Like</span>
-            </button>
-          </div>
-        </div>
-      </article>
-      <dialog class="floppy">
+    <main class="main page__section cards">
+      <ul class="cards__list">
+        <li class="cards__list-item">
+          <article class="card">
+            <h2 class="card__title">Фритрек и нулевой спринт: Подготовка к работе</h2>
+            <div class="card__image-wrapper">
+              <span class="card__label">&lt;/HTML&gt;</span>
+              <picture>
+                <source type="image/avif" srcset="./images/car.avif">
+                <source type="image/webp" srcset="./images/car.webp">
+                <img
+                  src="./images/car.png"
+                  alt="На изображении автомобиль."
+                  class="card__image"
+                  loading="lazy"
+                >
+              </picture>
+            </div>
+            <div class="card__content">
+              <p class="card__content-text">Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.</p>
+              <p class="card__content-text">Место для ваших воспоминаний о начале обучения.</p>
+              <div class="card__buttons">
+                <button class="card__icon-button button">
+                  <svg class="like-icon"></svg>
+                </button>
+                <button class="card__like-button button">
+                  <span class="button__text">Like</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </main>
+    <dialog class="floppy">
       <!--<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 28" class="floppy">
         <use href="./svg/floppy.svg#floppy"></use>
       </svg>-->
-      </dialog>
-    </main>
+    </dialog>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
