@@ -7,11 +7,16 @@
   --font-size-header-text: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   --font-size-main: 18px;
   --font-size-label: 14px;
+  --font-size-button: 14px;
   --font-weight-card-title: 700;
   --font-weight-main: 400;
   --line-height-main: 21px;
+  --line-height-button: .9;
   --page-section-size: clamp(23.4375rem, 16.2853rem + 30.5164vw, 43.75rem);
+  --button-save-size: clamp(19.125rem, 17.3955rem + 7.3791vw, 20.9375rem);
   --padding-block-header: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
+  --background-color-page: #1a1a1a;
+  --background-color-main: #fff;
 }
 
 @media (width <= 375px) {
