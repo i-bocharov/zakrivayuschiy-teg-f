@@ -17,6 +17,7 @@
   --padding-block-header: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
   --background-color-page: #1a1a1a;
   --background-color-main: #fff;
+  --background-color-image: #434343;
 }
 
 @media (width <= 375px) {
