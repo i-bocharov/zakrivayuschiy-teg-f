@@ -15,10 +15,10 @@
   font-family: Inter, sans-serif;
   font-weight: 400;
   background-color: var(--background-color-page, #1a1a1a);
-  background-image:
+  background-image: var(--background-image-page,
     repeating-linear-gradient(to right, #d3d3d3 0 2px, #d3d3d300 2px 4px),
     repeating-linear-gradient(#d3d3d3 0 2px, #d3d3d300 2px 4px),
-    linear-gradient(#e7e7e7, #1a1a1a);
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a));
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -66,8 +66,8 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: 50px;
   align-items: center;
+  gap: 50px;
 }
 
 .cards {
@@ -76,8 +76,8 @@
 
 .cards__list {
   display: flex;
-  gap: 50px;
   flex-direction: column;
+  gap: 50px;
 }
 
 .cards__list-item {
@@ -89,13 +89,13 @@
 }
 
 .card__title {
+  border-block-end: 2px solid #000;
   padding-inline: 10px;
   padding-block: 5px;
   font-family: Inter, sans-serif;
   font-weight: 700;
   font-size: var(--font-size-main, 18px);
   background-color: var(--background-color-main, #fff);
-  border-block-end: 2px solid #000;
 }
 
 @supports (font-variation-settings: normal) {
@@ -118,18 +118,27 @@
   font-weight: 400;
   font-size: var(--font-size-label, 14px);
   text-transform: uppercase;
+  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff;
   inset-inline-end: 27px;
   inset-block-start: 24px;
   mix-blend-mode: hard-light;
-  -webkit-text-stroke: 1px #fff;
+}
+
+@supports (-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff) {
+  .card__label {
+    text-shadow: none;
+    -webkit-text-stroke: 1px #fff;
+    text-stroke: 1px #fff;
+  }
 }
 
 .card__image {
   display: block;
   object-fit: cover;
   object-position: center;
-  inline-size: 100%;
   background-color: var(--background-color-image, #434343);
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 .filter-blur {
@@ -137,11 +146,11 @@
 }
 
 .filter-contrast {
-  filter: contrast(250%);
+  filter: contrast(30%);
 }
 
 .filter-grayscale {
-  filter: grayscale(80%);
+  filter: grayscale(100%);
 }
 
 .filter-hue-rotate {
@@ -161,17 +170,17 @@
 }
 
 .filter-multiple {
-  filter: invert(40%) brightness(30%);
+  filter: invert(20%) brightness(60%);
 }
 
 .card__content {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  border-block-start: 2px solid #000;
   padding-inline: 25px;
   padding-block: 25px;
   background-color: var(--background-color-main, #fff);
-  border-block-start: 2px solid #000;
 }
 
 .card__content-text {
@@ -226,13 +235,13 @@
 
 .button-save {
   display: flex;
-  justify-content: center;
-  inline-size: var(--button-save-size, 306px);
   flex-direction: column;
+  justify-content: center;
+  gap: 8px;
   padding-inline: 5px;
   padding-block: 15px;
   background-color: var(--background-color-main, #fff);
-  gap: 8px;
+  inline-size: var(--button-save-size, 306px);
 
 
 }
