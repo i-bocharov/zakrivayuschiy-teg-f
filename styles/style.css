@@ -234,9 +234,7 @@
 }
 
 .button-save {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 8px;
   padding-inline: 5px;
   padding-block: 15px;
@@ -253,6 +251,13 @@
 }
 
 .floppy {
-  inline-size: 29px;
+  inline-size: 28px;
   block-size: 28px;
+}
+
+@media (width > 768px) {
+  .floppy {
+    inline-size: 21px;
+    block-size: 21px;
+  }
 }
