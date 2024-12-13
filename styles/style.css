@@ -210,7 +210,26 @@
   align-items: center;
   border: 2px solid currentColor;
   background-color: transparent;
+  cursor: pointer;
+/*  position: relative;
+  color: #fff; */
 }
+
+/*
+.button:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--main-color);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.button:hover:after {
+  transform: scaleX(1);
+}
+*/
 
 .card__icon-button {
   border: none;
@@ -231,6 +250,9 @@
   font-weight: 400;
   font-size: var(--font-size-button, 14px);
   line-height: var(--line-height-button, .9);
+
+/*  mix-blend-mode: difference;
+  position: relative;*/
 }
 
 .button-save {
@@ -240,8 +262,6 @@
   padding-block: 15px;
   background-color: var(--background-color-main, #fff);
   inline-size: var(--button-save-size, 306px);
-
-
 }
 
 @media (width > 768px) {
@@ -260,4 +280,48 @@
     inline-size: 21px;
     block-size: 21px;
   }
+}
+
+.modal-save {
+  border: 2px solid #000;
+  padding-inline: var(--padding-inline-modal, 40px);
+  padding-block: 30px;
+  font-family: var(--font-family-accent, PressStart2P), sans-serif;
+  font-weight: 400;
+  font-size: var(--font-size-button, 14px);
+  line-height: var(--line-height-modal, 1.5);
+  inline-size: var(--modal-save-size, 341px);
+}
+
+.modal-save[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.modal-save::backdrop {
+  opacity: .75;
+  background-color: var(--background-color-backdrop, #000);
+}
+
+.modal-save__content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.modal-save__icon {
+  flex-shrink: 0;
+  inline-size: 39px;
+  block-size: 39px;
+}
+
+.modal-save__text {
+  text-transform: uppercase;
+}
+
+.modal-save__button {
+  padding-block: 9px;
+  text-transform: uppercase;
+  inline-size: 100%;
 }

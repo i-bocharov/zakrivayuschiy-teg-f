@@ -12,12 +12,16 @@
   --font-weight-main: 400;
   --line-height-main: 21px;
   --line-height-button: .9;
+  --line-height-modal: 1.5;
   --page-section-size: clamp(23.4375rem, 16.2853rem + 30.5164vw, 43.75rem);
   --button-save-size: clamp(19.125rem, 17.3955rem + 7.3791vw, 20.9375rem);
+  --modal-save-size: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
   --padding-block-header: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
+  --padding-inline-modal: 40px;
   --background-color-page: #1a1a1a;
   --background-color-main: #fff;
   --background-color-image: #434343;
+  --background-color-backdrop: #000;
   --background-image-page:
     repeating-linear-gradient(to right, #d3d3d3 0 2px, #d3d3d300 2px 4px),
     repeating-linear-gradient(#d3d3d3 0 2px, #d3d3d300 2px 4px),
@@ -36,5 +40,6 @@
   :root {
     --font-size-header-title: 65px;
     --font-size-header-text: 23px;
+    --padding-inline-modal: 30px;
   }
 }
