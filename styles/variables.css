@@ -26,6 +26,17 @@
     repeating-linear-gradient(to right, #d3d3d3 0 2px, #d3d3d300 2px 4px),
     repeating-linear-gradient(#d3d3d3 0 2px, #d3d3d300 2px 4px),
     linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+
+  /* переменные для стилизации сердца */
+  --color-heart-contour: #000;
+  --color-heart-sparks: #ff0000;
+  --color-heart-core: #000;
+  --color-heart-core-active: #ff0000;
+  --color-heart-core-is-liked: #ff0000;
+  --color-heart-main-body: #000;
+  --color-heart-main-body-active: #ff0000;
+  --color-heart-main-body-is-liked: #ff0000;
+  --color-heart-contour-is-liked: #ff0000;
 }
 
 @media (width <= 375px) {
