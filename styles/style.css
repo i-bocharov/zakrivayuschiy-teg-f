@@ -50,14 +50,14 @@
 }
 
 .header__title {
-  font-family: var(--font-family-accent, PressStart2P), sans-serif;
+  font-family: var(--font-family-accent, PressStart2P), fantasy;
   font-weight: 400;
   font-size: var(--font-size-header-title, 65px);
   text-transform: uppercase;
 }
 
 .header__text {
-  font-family: var(--font-family-accent, PressStart2P), sans-serif;
+  font-family: var(--font-family-accent, PressStart2P), fantasy;
   font-weight: 400;
   font-size: var(--font-size-header-text, 23px);
   text-transform: uppercase;
@@ -106,14 +106,21 @@
   z-index: 1;
   opacity: .5;
   color: #000;
-  font-family: var(--font-family-accent, PressStart2P), sans-serif;
+  font-family: var(--font-family-accent, PressStart2P), fantasy;
   font-weight: 400;
   font-size: var(--font-size-label, 14px);
   text-transform: uppercase;
   text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff;
-  inset-inline-end: 27px;
-  inset-block-start: 24px;
+  inset-inline-end: 11px;
+  inset-block-start: 23px;
   mix-blend-mode: hard-light;
+}
+
+@media (width > 768px) {
+  .card__label {
+    inset-inline-end: 25px;
+    inset-block-start: 25px;
+  }
 }
 
 @supports (-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff) {
@@ -131,6 +138,7 @@
   background-color: var(--background-color-image, #434343);
   inline-size: 100%;
   block-size: 100%;
+  aspect-ratio: 1 / 1;
 }
 
 .filter-blur {
@@ -202,7 +210,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid #000;
+  border: 2px solid currentColor;
   background-color: #fff;
   cursor: pointer;
 }
@@ -235,6 +243,7 @@
   border: 2px solid transparent;
   padding: 0;
   background-color: transparent;
+  transition: .3s ease;
   block-size: 38px;
 }
 
@@ -244,7 +253,6 @@
 
 .card__icon-button:focus-visible {
   border: 2px solid #000;
-  transition: .3s ease;
   cursor: pointer;
 }
 
@@ -259,7 +267,7 @@
   position: relative;
   z-index: 1;
   color: #fff;
-  font-family: var(--font-family-accent, PressStart2P), sans-serif;
+  font-family: var(--font-family-accent, PressStart2P), fantasy;
   font-weight: 400;
   font-size: var(--font-size-button, 14px);
   line-height: var(--line-height-button, .9);
@@ -301,7 +309,7 @@
   border: 2px solid #000;
   padding-inline: var(--padding-inline-modal, 40px);
   padding-block: 30px;
-  font-family: var(--font-family-accent, PressStart2P), sans-serif;
+  font-family: var(--font-family-accent, PressStart2P), fantasy;
   font-weight: 400;
   font-size: var(--font-size-button, 14px);
   line-height: var(--line-height-modal, 1.5);
